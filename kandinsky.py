@@ -9,6 +9,8 @@ from dotenv import load_dotenv
 load_dotenv()
 ak = os.getenv('ACCESS_KEY')
 sk = os.getenv('SECRET_KEY')
+
+
 class Text2ImageAPI:
 
     def __init__(self, url, api_key, secret_key):

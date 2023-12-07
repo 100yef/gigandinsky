@@ -1,9 +1,13 @@
 import telebot
 from telebot import types
-
+import os
 import kandinsky
+from dotenv import load_dotenv
 
-bot = telebot.TeleBot('6688638137:AAHuaFIar3ePti4X_a7XsbYVUmPd2HG22fg')
+load_dotenv()
+token = os.getenv('TELEBOT_TOKEN')
+
+bot = telebot.TeleBot(token)
 prompt = ''
 
 
