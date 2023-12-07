@@ -1,13 +1,14 @@
 import json
 import time
-
+import os
 import requests
 import pybase64
 
-ak = '8C80E026CE973DA4CFF3498D1576B612'
-sk = '140847E305A1F5F3E8BC7B3732DEB38C'
+from dotenv import load_dotenv
 
-
+load_dotenv()
+ak = os.getenv('ACCESS_KEY')
+sk = os.getenv('SECRET_KEY')
 class Text2ImageAPI:
 
     def __init__(self, url, api_key, secret_key):
